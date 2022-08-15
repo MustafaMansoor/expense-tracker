@@ -1,23 +1,21 @@
 import React, { useContext } from 'react'
-import { Transactioncontex } from './Transactioncontext'
+import { Transactioncontex, Transactionprovider } from './Transactioncontext'
+
 export const TransactionHistory = () => {
  let transaction = useContext(Transactioncontex);
   return (
-    <div>
+    <Transactionprovider>
         <h3>Transaction History</h3>
+        
         <ul className="list">
-       {transaction.map((transobj,index) =>(
-        <li className="plus" key={index}>{transobj.disc} 
+       {transaction.map((transobj) =>(
+        <li className="plus">{transobj.disc} 
             <span>{transobj.amount}</span>
             <button className="delete-btn">X</button>
         </li>
        )
-        )}
-        </ul>
-    
-    
-    
-    
-    </div>
+      )}
+      </ul>
+      </Transactionprovider>
   )
 }

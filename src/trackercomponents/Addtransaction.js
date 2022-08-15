@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 export const Addtransaction = () => {
     return (
     <div>
@@ -19,8 +17,7 @@ export const Addtransaction = () => {
     
 <label htmlFor='Transactionamount'> 
          Transaction Amount
-    </label>
-    
+    </label>    
     <input type="number" 
     id="Transactionamount" 
     placeholder="Enter the transaction amount"
@@ -28,7 +25,5 @@ export const Addtransaction = () => {
 </div>
 <button className="btn">Add Transaction</button>
 </form>
-
     </div>
-  )
-}
+)}
